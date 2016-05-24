@@ -1,6 +1,17 @@
 from django.db import models
 
 
+class ApiToken(models.Model):
+    token = models.CharField(max_length=256, primary_key=True)
+    access_level = models.IntegerField(default=0)
+    is_master = models.BooleanField(default=False)
+
+    def __str__(self):
+        if self.is_master:
+            return self.token + ' (master)'
+        return self.token + ' (' + str(self.access_level) + ')'
+
+
 class Subject(models.Model):
     name = models.CharField(max_length=64)
     slug = models.CharField(max_length=64)
