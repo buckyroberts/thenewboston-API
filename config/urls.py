@@ -15,5 +15,5 @@ urlpatterns = [
     url(r'^v1/courses/(?P<major_slug>[\S]+)/$', course.CourseView.as_view()),
 
     # Videos
-    url(r'^v1/videos/$', video.VideoView.as_view()),
+    url(r'^v1/videos/(?P<course_id>[\S]+)/$', video.VideoView.as_view()),
 ]

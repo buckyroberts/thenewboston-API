@@ -31,4 +31,4 @@ class VideoSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Video
-        exclude = ('id',)
+        fields = ('episode', 'title', 'youtube_code')
