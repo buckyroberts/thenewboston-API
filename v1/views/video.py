@@ -9,6 +9,6 @@ class VideoView(APIView):
 
     @staticmethod
     def get(request):
-        pages = Video.objects.all()
-        serializer = VideoSerializer(pages, many=True)
+        videos = Video.objects.all()
+        serializer = VideoSerializer(videos, many=True)
         return Response(serializer.data)

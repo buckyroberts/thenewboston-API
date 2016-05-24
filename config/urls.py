@@ -1,6 +1,6 @@
 from django.conf.urls import url
 from django.contrib import admin
-from v1.views import api_token, subject, playlist, video
+from v1.views import api_token, major, course, video
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -8,12 +8,12 @@ urlpatterns = [
     # API tokens
     url(r'^v1/api-tokens/(?P<token>[\S]+)/$', api_token.view_single_token),
 
-    # Subjects
-    url(r'^v1/subjects/$', subject.SubjectView.as_view()),
+    # Majors
+    url(r'^v1/majors/$', major.MajorView.as_view()),
 
-    # Playlists
-    url(r'^v1/playlists/$', playlist.PlaylistView.as_view()),
+    # Courses
+    url(r'^v1/courses/$', course.CourseView.as_view()),
 
-    # Playlists
+    # Videos
     url(r'^v1/videos/$', video.VideoView.as_view()),
 ]

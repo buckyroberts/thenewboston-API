@@ -12,7 +12,7 @@ class ApiToken(models.Model):
         return self.token + ' (' + str(self.access_level) + ')'
 
 
-class Subject(models.Model):
+class Major(models.Model):
     name = models.CharField(max_length=64)
     slug = models.CharField(max_length=64)
 
@@ -20,10 +20,10 @@ class Subject(models.Model):
         return self.name
 
 
-class Playlist(models.Model):
+class Course(models.Model):
     category = models.CharField(blank=True, max_length=128)
     name = models.CharField(max_length=128)
-    subject = models.ForeignKey(Subject, blank=True, null=True, on_delete=models.CASCADE)
+    subject = models.ForeignKey(Major, blank=True, null=True, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name
@@ -32,8 +32,8 @@ class Playlist(models.Model):
 class Video(models.Model):
     episode = models.IntegerField()
     title = models.CharField(max_length=128)
-    playlist = models.ForeignKey(Playlist, blank=True, null=True, on_delete=models.CASCADE)
+    course = models.ForeignKey(Course, blank=True, null=True, on_delete=models.CASCADE)
     youtube_code = models.CharField(max_length=16)
 
     def __str__(self):
-        return self.playlist.name + ' - ' + str(self.number) + ' - ' + self.name
+        return self.course.name + ' - ' + str(self.episode) + ' - ' + self.title

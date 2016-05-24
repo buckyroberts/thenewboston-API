@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import ApiToken, Subject, Playlist, Video
+from .models import ApiToken, Major, Course, Video
 
 
 class ApiTokenSerializer(serializers.ModelSerializer):
@@ -9,17 +9,17 @@ class ApiTokenSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
-class SubjectSerializer(serializers.ModelSerializer):
+class MajorSerializer(serializers.ModelSerializer):
 
     class Meta:
-        model = Subject
+        model = Major
         fields = '__all__'
 
 
-class PlaylistSerializer(serializers.ModelSerializer):
+class CourseSerializer(serializers.ModelSerializer):
 
     class Meta:
-        model = Playlist
+        model = Course
         fields = '__all__'
 
 
