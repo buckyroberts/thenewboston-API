@@ -30,10 +30,10 @@ class Playlist(models.Model):
 
 
 class Video(models.Model):
-    code = models.CharField(max_length=16)
-    name = models.CharField(max_length=128)
-    number = models.IntegerField()
+    episode = models.IntegerField()
+    title = models.CharField(max_length=128)
     playlist = models.ForeignKey(Playlist, blank=True, null=True, on_delete=models.CASCADE)
+    youtube_code = models.CharField(max_length=16)
 
     def __str__(self):
         return self.playlist.name + ' - ' + str(self.number) + ' - ' + self.name

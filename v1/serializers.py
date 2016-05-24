@@ -24,7 +24,7 @@ class PlaylistSerializer(serializers.ModelSerializer):
 
 
 class VideoSerializer(serializers.ModelSerializer):
-    
+
     class Meta:
         model = Video
-        fields = '__all__'
+        exclude = ('id',)
