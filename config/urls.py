@@ -12,7 +12,7 @@ urlpatterns = [
     url(r'^v1/majors/$', major.MajorView.as_view()),
 
     # Courses
-    url(r'^v1/courses/$', course.CourseView.as_view()),
+    url(r'^v1/courses/(?P<major_slug>[\S]+)/$', course.CourseView.as_view()),
 
     # Videos
     url(r'^v1/videos/$', video.VideoView.as_view()),

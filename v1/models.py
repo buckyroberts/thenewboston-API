@@ -23,7 +23,7 @@ class Major(models.Model):
 class Course(models.Model):
     category = models.CharField(blank=True, max_length=128)
     name = models.CharField(max_length=128)
-    subject = models.ForeignKey(Major, blank=True, null=True, on_delete=models.CASCADE)
+    major = models.ForeignKey(Major, blank=True, null=True, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name
