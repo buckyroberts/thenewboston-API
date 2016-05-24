@@ -1,16 +1,16 @@
 ## thenewboston API
 
-**View majors**
+**All majors**
 ```
 http://127.0.0.1:8000/v1/majors/
 ```
 
-**View courses for a major**
+**Courses**
 ```
 http://127.0.0.1:8000/v1/courses/computer-science/
 ```
 
-**View videos for a course**
+**Course videos**
 ```
 http://127.0.0.1:8000/v1/videos/2/
 ```
