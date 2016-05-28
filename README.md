@@ -1,7 +1,7 @@
 ![](http://i.imgur.com/w9HxHbI.png)
 
 
-### All majors
+## All majors
 
 `/v1/majors/` - Returns an array of all majors.
 
@@ -28,12 +28,14 @@ response:
 ```
 
 
-### Courses for a major
+## Courses for a major
 
 `/v1/{major_slug}/` - Returns an array of all courses for a major.
 
 request:
-`/v1/computer-science/`
+```
+/v1/computer-science/
+```
 
 response:
 ```
@@ -55,12 +57,14 @@ response:
 ```
 
 
-### Videos for a course
+## Videos for a course
 
 `/v1/videos/{course_id}/` - Returns an array of all videos for a course.
 
 request:
-`/v1/videos/1/`
+```
+/v1/videos/1/
+```
 
 response:
 ```
