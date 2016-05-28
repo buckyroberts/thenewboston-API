@@ -11,9 +11,9 @@ urlpatterns = [
     # Majors
     url(r'^v1/majors/$', major.MajorView.as_view()),
 
-    # Courses
-    url(r'^v1/courses/(?P<major_slug>[\S]+)/$', course.CourseView.as_view()),
-
     # Videos
     url(r'^v1/videos/(?P<course_id>[\S]+)/$', video.VideoView.as_view()),
+
+    # Courses
+    url(r'^v1/(?P<major_slug>[\S]+)/$', course.CourseView.as_view()),
 ]

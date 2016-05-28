@@ -5,7 +5,7 @@ from v1.models import Course, Video
 from v1.serializers import VideoSerializer
 
 
-# video/
+# videos/{course_id}/
 class VideoView(APIView):
 
     @staticmethod

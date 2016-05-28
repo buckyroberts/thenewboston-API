@@ -5,7 +5,7 @@ from v1.models import Course, Major
 from v1.serializers import CourseSerializer
 
 
-# courses/computer-science/
+# courses/{major_slug}/
 class CourseView(APIView):
 
     @staticmethod
