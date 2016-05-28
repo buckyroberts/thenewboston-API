@@ -84,3 +84,10 @@ response:
     etc...
 ]
 ```
+
+***
+
+Note: the login credentials for the development admin panel are:
+
+- admin
+- pass1234
