@@ -6,7 +6,9 @@
 `/v1/majors/` - Returns an array of all majors.
 
 request:
-`/v1/majors/`
+```
+/v1/majors/
+```
 
 response:
 ```
