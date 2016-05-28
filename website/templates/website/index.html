@@ -2,5 +2,19 @@
 {% load staticfiles %}
 
 {% block content %}
-    Hey now
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+
+                <h3>thenewboston API</h3>
+
+                <ul>
+                    <li><a href="{% url 'majors' %}">/v1/majors/</a></li>
+                    <li><a href="{% url 'courses' major_slug='computer-science' %}">/v1/computer-science/</a></li>
+                    <li><a href="{% url 'videos' course_id=1 %}">/v1/videos/1/</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
 {% endblock %}
