@@ -14,5 +14,4 @@ urlpatterns = [
 
     # Website
     url(r'^', include('website.urls')),
-
 ]
