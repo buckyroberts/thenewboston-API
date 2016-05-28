@@ -70,16 +70,16 @@ response:
 ```
 [
     {
-        "id": 1,
-        "category": "Programming",
-        "name": "C++ for Beginners",
-        "major": 1
+        "episode": 1,
+        "title": "Installing CodeBlocks",
+        "youtube_code": "tvC1WCdV1XU",
+        "course": 1
     },
     {
-        "id": 2,
-        "category": "Programming",
-        "name": "Java",
-        "major": 1
+        "episode": 2,
+        "title": "Understanding a Simple C++ Program",
+        "youtube_code": "SWZfFNyUsxc",
+        "course": 1
     },
     etc...
 ]
