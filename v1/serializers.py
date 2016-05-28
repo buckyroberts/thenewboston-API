@@ -13,22 +13,18 @@ class MajorSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Major
-        exclude = ('id',)
+        fields = '__all__'
 
 
 class CourseSerializer(serializers.ModelSerializer):
-    major = serializers.SerializerMethodField()
 
     class Meta:
         model = Course
-        fields = ('id', 'name', 'category', 'major')
-
-    def get_major(self, course):
-        return course.major.slug
+        fields = '__all__'
 
 
 class VideoSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Video
-        fields = ('episode', 'title', 'youtube_code')
+        exclude = ('id',)

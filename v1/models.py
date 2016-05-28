@@ -30,9 +30,9 @@ class Course(models.Model):
 
 
 class Video(models.Model):
+    course = models.ForeignKey(Course, blank=True, null=True, on_delete=models.CASCADE)
     episode = models.IntegerField()
     title = models.CharField(max_length=128)
-    course = models.ForeignKey(Course, blank=True, null=True, on_delete=models.CASCADE)
     youtube_code = models.CharField(max_length=16)
 
     def __str__(self):
