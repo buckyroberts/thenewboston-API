@@ -11,7 +11,7 @@ request:
 ```
 
 response:
-```
+```json
 [
     {
         "id": 1,
