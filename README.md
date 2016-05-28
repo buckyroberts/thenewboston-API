@@ -8,7 +8,7 @@ Returns an array of all majors.
 /v1/majors/
 ```
 
-response:
+/v1/majors/:
 ```
 [
     {
@@ -27,13 +27,40 @@ response:
 
 
 ### Courses for a major
-Returns Courses for a major
+Returns an array of all courses for a major.
 
 ```
-/v1/computer-science/
+/v1/{major_slug}/
 ```
 
-response:
+__/v1/computer-science/__:
+```
+[
+    {
+        "id": 1,
+        "category": "Programming",
+        "name": "C++ for Beginners",
+        "major": 1
+    },
+    {
+        "id": 2,
+        "category": "Programming",
+        "name": "Java",
+        "major": 1
+    },
+    etc...
+]
+```
+
+
+### Videos for a course
+Returns an array of all videos for a course.
+
+```
+/v1/videos/{course_id}/
+```
+
+__/v1/videos/1/__:
 ```
 [
     {
