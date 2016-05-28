@@ -15,13 +15,18 @@ response:
 [
     {
         "id": 1,
-        "name": "Computer Science",
-        "slug": "computer-science"
+        "name": "Beauty",
+        "slug": "beauty"
     },
     {
         "id": 2,
-        "name": "Math",
-        "slug": "math"
+        "name": "Business",
+        "slug": "business"
+    },
+    {
+        "id": 3,
+        "name": "Computer Science",
+        "slug": "computer-science"
     },
     etc...
 ]
@@ -43,14 +48,20 @@ response:
     {
         "id": 1,
         "category": "Programming",
-        "name": "C++ for Beginners",
-        "major": 1
+        "name": "AJAX",
+        "major": 3
     },
     {
         "id": 2,
         "category": "Programming",
-        "name": "Java",
-        "major": 1
+        "name": "Android App Development for Beginners",
+        "major": 3
+    },
+    {
+        "id": 3,
+        "category": "Programming",
+        "name": "C Programming",
+        "major": 3
     },
     etc...
 ]
@@ -71,15 +82,15 @@ response:
 [
     {
         "episode": 1,
-        "title": "Installing CodeBlocks",
-        "youtube_code": "tvC1WCdV1XU",
-        "course": 1
+        "title": "Introduction",
+        "youtube_code": "QAbQgLGKd3Y",
+        "course": 2
     },
     {
         "episode": 2,
-        "title": "Understanding a Simple C++ Program",
-        "youtube_code": "SWZfFNyUsxc",
-        "course": 1
+        "title": "Installing Android Studio",
+        "youtube_code": "zEsDwzjPJ5c",
+        "course": 2
     },
     etc...
 ]
