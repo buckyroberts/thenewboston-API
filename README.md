@@ -33,7 +33,7 @@ Returns an array of all courses for a major.
 /v1/{major_slug}/
 ```
 
-__/v1/computer-science/__:
+_/v1/computer-science/_:
 ```
 [
     {
@@ -60,7 +60,7 @@ Returns an array of all videos for a course.
 /v1/videos/{course_id}/
 ```
 
-__/v1/videos/1/__:
+_/v1/videos/1/_:
 ```
 [
     {
