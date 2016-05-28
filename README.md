@@ -3,7 +3,7 @@
 
 ## All majors
 
-`/v1/majors/` - Returns an array of all majors.
+`/v1/majors/` - returns an array of all majors.
 
 request:
 ```
@@ -30,7 +30,7 @@ response:
 
 ## Courses for a major
 
-`/v1/{major_slug}/` - Returns an array of all courses for a major.
+`/v1/{major_slug}/` - returns an array of all courses for a major.
 
 request:
 ```
@@ -59,7 +59,7 @@ response:
 
 ## Videos for a course
 
-`/v1/videos/{course_id}/` - Returns an array of all videos for a course.
+`/v1/videos/{course_id}/` - returns an array of all videos for a course.
 
 request:
 ```
