@@ -2,6 +2,7 @@
 
 
 ### All majors
+
 Returns an array of all majors.
 
 ```
@@ -27,13 +28,10 @@ Returns an array of all majors.
 
 
 ### Courses for a major
-Returns an array of all courses for a major.
 
-```
-/v1/{major_slug}/
-```
+`/v1/{major_slug}/` - Returns an array of all courses for a major.
 
-_/v1/computer-science/_:
+/v1/computer-science/:
 ```
 [
     {
@@ -54,6 +52,7 @@ _/v1/computer-science/_:
 
 
 ### Videos for a course
+
 Returns an array of all videos for a course.
 
 ```
