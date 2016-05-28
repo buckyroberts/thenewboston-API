@@ -27,8 +27,7 @@ response:
         "id": 3,
         "name": "Computer Science",
         "slug": "computer-science"
-    },
-    etc...
+    }
 ]
 ```
 
@@ -43,7 +42,7 @@ request:
 ```
 
 response:
-```
+```json
 [
     {
         "id": 1,
@@ -62,8 +61,7 @@ response:
         "category": "Programming",
         "name": "C Programming",
         "major": 3
-    },
-    etc...
+    }
 ]
 ```
 
@@ -78,7 +76,7 @@ request:
 ```
 
 response:
-```
+```json
 [
     {
         "episode": 1,
@@ -91,8 +89,7 @@ response:
         "title": "Installing Android Studio",
         "youtube_code": "zEsDwzjPJ5c",
         "course": 2
-    },
-    etc...
+    }
 ]
 ```
 
