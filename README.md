@@ -5,6 +5,7 @@
 
 `/v1/majors/` - Returns an array of all majors.
 
+request:
 `/v1/majors/`
 
 response:
@@ -29,7 +30,10 @@ response:
 
 `/v1/{major_slug}/` - Returns an array of all courses for a major.
 
-/v1/computer-science/:
+request:
+`/v1/computer-science/`
+
+response:
 ```
 [
     {
@@ -51,13 +55,12 @@ response:
 
 ### Videos for a course
 
-Returns an array of all videos for a course.
+`/v1/videos/{course_id}/` - Returns an array of all videos for a course.
 
-```
-/v1/videos/{course_id}/
-```
+request:
+`/v1/videos/1/`
 
-_/v1/videos/1/_:
+response:
 ```
 [
     {
