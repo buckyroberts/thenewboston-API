@@ -1,16 +1,16 @@
-## thenewboston API
+![](http://i.imgur.com/w9HxHbI.png)
 
 **All majors**
 ```
-http://127.0.0.1:8000/v1/majors/
+/v1/majors/
 ```
 
 **Courses for a major**
 ```
-http://127.0.0.1:8000/v1/courses/computer-science/
+/v1/courses/computer-science/
 ```
 
 **Videos for a course**
 ```
-http://127.0.0.1:8000/v1/videos/2/
+/v1/videos/2/
 ```
