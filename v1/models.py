@@ -13,6 +13,7 @@ class ApiToken(models.Model):
 
 
 class Major(models.Model):
+    icon = models.CharField(max_length=64)
     name = models.CharField(max_length=64)
     slug = models.CharField(max_length=64)
 
