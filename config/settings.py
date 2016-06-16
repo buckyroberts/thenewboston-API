@@ -5,7 +5,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 't1&%)ht^vsa&!a&22cs9p=22n#us@08r9_e#rqgxm@1vb(!@0s'
 DEBUG = True
 
-ALLOWED_HOSTS = []
+WEBSITE_IP = '127.0.0.1'
+
+ALLOWED_HOSTS = [
+    WEBSITE_IP,
+]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -14,12 +18,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'corsheaders',
     'rest_framework',
     'v1.apps.V1Config',
     'website.apps.WebsiteConfig',
 ]
 
 MIDDLEWARE_CLASSES = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -72,7 +78,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
 USE_I18N = True
@@ -80,3 +85,5 @@ USE_L10N = True
 USE_TZ = True
 
 STATIC_URL = '/static/'
+
+CORS_ORIGIN_ALLOW_ALL = True
