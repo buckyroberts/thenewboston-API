@@ -26,7 +26,6 @@ class VideoView(APIView):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-
     @staticmethod
     def delete(request):
         if not ApiToken.objects.filter(token=request.data['token'], is_master=True):
