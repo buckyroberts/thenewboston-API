@@ -1,20 +1,32 @@
 {% extends 'website/base.html' %}
 {% load staticfiles %}
 
+{% block js %}
+    <script>
+        $(function () {
+            $.getJSON("http://127.0.0.1:8000/v1/majors/", function (data) {
+                var majors = [];
+                $.each(data, function (index, major) {
+                    var url = 'http://127.0.0.1:8000/v1/' + major.slug + '/';
+                    majors.push('<li><a href="' + url + '">' + major.name + '</a></li>');
+                });
+                $('#majors').html($('<ul/>', {
+                    html: majors.join('')
+                }));
+            });
+        });
+    </script>
+{% endblock %}
+
 {% block content %}
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
+    <h2>thenewboston API</h2>
+    <ul>
+        <li><a href="{% url 'majors' %}">/v1/majors/</a></li>
+        <li><a href="{% url 'courses' major_slug='computer-science' %}">/v1/computer-science/</a></li>
+        <li><a href="{% url 'videos' course_id=1 %}">/v1/videos/1/</a></li>
+    </ul>
 
-                <h3>thenewboston API</h3>
+    <h3>Majors</h3>
+    <div id="majors"></div>
 
-                <ul>
-                    <li><a href="{% url 'majors' %}">/v1/majors/</a></li>
-                    <li><a href="{% url 'courses' major_slug='computer-science' %}">/v1/computer-science/</a></li>
-                    <li><a href="{% url 'videos' course_id=1 %}">/v1/videos/1/</a></li>
-                </ul>
-
-            </div>
-        </div>
-    </div>
 {% endblock %}
